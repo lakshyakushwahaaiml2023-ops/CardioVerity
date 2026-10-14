@@ -1,0 +1,413 @@
+{
+  "shape": {
+    "rows": 303,
+    "columns": 59
+  },
+  "duplicate_rows": 0,
+  "missing_values": {},
+  "column_counts": {
+    "total_features": 55,
+    "target_features": 4,
+    "numeric_features": 23,
+    "categorical_features": 32,
+    "constant_features": 1
+  },
+  "constant_columns": [
+    "Exertional CP"
+  ],
+  "numeric_columns": [
+    "Age",
+    "Weight",
+    "Length",
+    "BMI",
+    "BP",
+    "PR",
+    "Function Class",
+    "FBS",
+    "CR",
+    "TG",
+    "LDL",
+    "HDL",
+    "BUN",
+    "ESR",
+    "HB",
+    "K",
+    "Na",
+    "WBC",
+    "Lymph",
+    "Neut",
+    "PLT",
+    "EF-TTE",
+    "Region RWMA"
+  ],
+  "categorical_columns": [
+    "Sex",
+    "DM",
+    "HTN",
+    "Current Smoker",
+    "EX-Smoker",
+    "FH",
+    "Obesity",
+    "CRF",
+    "CVA",
+    "Airway disease",
+    "Thyroid Disease",
+    "CHF",
+    "DLP",
+    "Edema",
+    "Weak Peripheral Pulse",
+    "Lung rales",
+    "Systolic Murmur",
+    "Diastolic Murmur",
+    "Typical Chest Pain",
+    "Dyspnea",
+    "Atypical",
+    "Nonanginal",
+    "Exertional CP",
+    "LowTH Ang",
+    "Q Wave",
+    "St Elevation",
+    "St Depression",
+    "Tinversion",
+    "LVH",
+    "Poor R Progression",
+    "BBB",
+    "VHD"
+  ],
+  "target_balance": {
+    "Cath": {
+      "counts": {
+        "CAD": 216,
+        "Normal": 87
+      },
+      "percentages": {
+        "CAD": 71.29,
+        "Normal": 28.71
+      }
+    },
+    "LAD": {
+      "counts": {
+        "Stenotic": 177,
+        "Normal": 126
+      },
+      "percentages": {
+        "Stenotic": 58.42,
+        "Normal": 41.58
+      }
+    },
+    "LCX": {
+      "counts": {
+        "Normal": 184,
+        "Stenotic": 119
+      },
+      "percentages": {
+        "Normal": 60.73,
+        "Stenotic": 39.27
+      }
+    },
+    "RCA": {
+      "counts": {
+        "Normal": 189,
+        "Stenotic": 114
+      },
+      "percentages": {
+        "Normal": 62.38,
+        "Stenotic": 37.62
+      }
+    }
+  },
+  "label_logic": {
+    "vessel_positive_cad_negative_count": 1,
+    "vessel_positive_cad_negative_indices": [
+      93
+    ],
+    "vessel_positive_cad_negative_rows": [
+      {
+        "Age": "65",
+        "Sex": "Male",
+        "LAD": "Stenotic",
+        "LCX": "Normal",
+        "RCA": "Normal",
+        "Cath": "Normal"
+      }
+    ],
+    "all_vessels_negative_cad_positive_count": 0,
+    "all_vessels_negative_cad_positive_indices": [],
+    "contingency_matrix_any_vessel_vs_cath": {
+      "vessel_neg_cath_normal": 86,
+      "vessel_neg_cath_cad": 0,
+      "vessel_pos_cath_normal": 1,
+      "vessel_pos_cath_cad": 216
+    }
+  },
+  "vessel_burden": {
+    "0": 86,
+    "1": 87,
+    "2": 67,
+    "3": 63
+  },
+  "vessel_co_occurrence": [
+    {
+      "LAD": "Normal",
+      "LCX": "Normal",
+      "RCA": "Normal",
+      "count": 86
+    },
+    {
+      "LAD": "Normal",
+      "LCX": "Normal",
+      "RCA": "Stenotic",
+      "count": 17
+    },
+    {
+      "LAD": "Normal",
+      "LCX": "Stenotic",
+      "RCA": "Normal",
+      "count": 13
+    },
+    {
+      "LAD": "Normal",
+      "LCX": "Stenotic",
+      "RCA": "Stenotic",
+      "count": 10
+    },
+    {
+      "LAD": "Stenotic",
+      "LCX": "Normal",
+      "RCA": "Normal",
+      "count": 57
+    },
+    {
+      "LAD": "Stenotic",
+      "LCX": "Normal",
+      "RCA": "Stenotic",
+      "count": 24
+    },
+    {
+      "LAD": "Stenotic",
+      "LCX": "Stenotic",
+      "RCA": "Normal",
+      "count": 33
+    },
+    {
+      "LAD": "Stenotic",
+      "LCX": "Stenotic",
+      "RCA": "Stenotic",
+      "count": 63
+    }
+  ],
+  "leakage_audit": {
+    "threshold": 0.9,
+    "suspicious_features": [],
+    "top_univariate_auc": {
+      "Cath": [
+        {
+          "feature": "Typical Chest Pain",
+          "target": "Cath",
+          "auc": 0.799
+        },
+        {
+          "feature": "Age",
+          "target": "Cath",
+          "auc": 0.7239
+        },
+        {
+          "feature": "Atypical",
+          "target": "Cath",
+          "auc": 0.712
+        },
+        {
+          "feature": "EF-TTE",
+          "target": "Cath",
+          "auc": 0.687
+        },
+        {
+          "feature": "Region RWMA",
+          "target": "Cath",
+          "auc": 0.6717
+        },
+        {
+          "feature": "BP",
+          "target": "Cath",
+          "auc": 0.6614
+        },
+        {
+          "feature": "HTN",
+          "target": "Cath",
+          "auc": 0.6564
+        },
+        {
+          "feature": "FBS",
+          "target": "Cath",
+          "auc": 0.6513
+        },
+        {
+          "feature": "ESR",
+          "target": "Cath",
+          "auc": 0.6339
+        },
+        {
+          "feature": "DM",
+          "target": "Cath",
+          "auc": 0.6277
+        }
+      ],
+      "LAD": [
+        {
+          "feature": "Typical Chest Pain",
+          "target": "LAD",
+          "auc": 0.7323
+        },
+        {
+          "feature": "EF-TTE",
+          "target": "LAD",
+          "auc": 0.7084
+        },
+        {
+          "feature": "Age",
+          "target": "LAD",
+          "auc": 0.6772
+        },
+        {
+          "feature": "Region RWMA",
+          "target": "LAD",
+          "auc": 0.6752
+        },
+        {
+          "feature": "Atypical",
+          "target": "LAD",
+          "auc": 0.6653
+        },
+        {
+          "feature": "ESR",
+          "target": "LAD",
+          "auc": 0.6214
+        },
+        {
+          "feature": "Neut",
+          "target": "LAD",
+          "auc": 0.6089
+        },
+        {
+          "feature": "Lymph",
+          "target": "LAD",
+          "auc": 0.6088
+        },
+        {
+          "feature": "PR",
+          "target": "LAD",
+          "auc": 0.5982
+        },
+        {
+          "feature": "Tinversion",
+          "target": "LAD",
+          "auc": 0.598
+        }
+      ],
+      "LCX": [
+        {
+          "feature": "Age",
+          "target": "LCX",
+          "auc": 0.6809
+        },
+        {
+          "feature": "Typical Chest Pain",
+          "target": "LCX",
+          "auc": 0.6494
+        },
+        {
+          "feature": "BP",
+          "target": "LCX",
+          "auc": 0.6169
+        },
+        {
+          "feature": "PLT",
+          "target": "LCX",
+          "auc": 0.6012
+        },
+        {
+          "feature": "FBS",
+          "target": "LCX",
+          "auc": 0.591
+        },
+        {
+          "feature": "TG",
+          "target": "LCX",
+          "auc": 0.589
+        },
+        {
+          "feature": "HTN",
+          "target": "LCX",
+          "auc": 0.5879
+        },
+        {
+          "feature": "EF-TTE",
+          "target": "LCX",
+          "auc": 0.5872
+        },
+        {
+          "feature": "CR",
+          "target": "LCX",
+          "auc": 0.582
+        },
+        {
+          "feature": "Atypical",
+          "target": "LCX",
+          "auc": 0.5797
+        }
+      ],
+      "RCA": [
+        {
+          "feature": "Typical Chest Pain",
+          "target": "RCA",
+          "auc": 0.6497
+        },
+        {
+          "feature": "Neut",
+          "target": "RCA",
+          "auc": 0.635
+        },
+        {
+          "feature": "Age",
+          "target": "RCA",
+          "auc": 0.6349
+        },
+        {
+          "feature": "Lymph",
+          "target": "RCA",
+          "auc": 0.6284
+        },
+        {
+          "feature": "DM",
+          "target": "RCA",
+          "auc": 0.6275
+        },
+        {
+          "feature": "ESR",
+          "target": "RCA",
+          "auc": 0.6138
+        },
+        {
+          "feature": "Atypical",
+          "target": "RCA",
+          "auc": 0.6124
+        },
+        {
+          "feature": "FBS",
+          "target": "RCA",
+          "auc": 0.6039
+        },
+        {
+          "feature": "WBC",
+          "target": "RCA",
+          "auc": 0.5825
+        },
+        {
+          "feature": "EF-TTE",
+          "target": "RCA",
+          "auc": 0.5782
+        }
+      ]
+    }
+  }
+}
